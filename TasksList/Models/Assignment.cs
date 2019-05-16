@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace TasksList.Models
 {
-    public class Task
+    public class Assignment
     {
-        public int TaskId { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public DateTime StartDate { get; set; }

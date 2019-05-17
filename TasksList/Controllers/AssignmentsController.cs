@@ -30,14 +30,14 @@ namespace TasksList.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                PageNotFound();
             }
 
             var assignment = await _context.Tasks
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (assignment == null)
             {
-                return NotFound();
+                return PageNotFound();
             }
 
             return View(assignment);
@@ -70,13 +70,13 @@ namespace TasksList.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                PageNotFound();
             }
 
             var assignment = await _context.Tasks.FindAsync(id);
             if (assignment == null)
             {
-                return NotFound();
+                PageNotFound();
             }
             return View(assignment);
         }
@@ -90,7 +90,7 @@ namespace TasksList.Controllers
         {
             if (id != assignment.Id)
             {
-                return NotFound();
+                PageNotFound();
             }
 
             if (ModelState.IsValid)
@@ -104,7 +104,7 @@ namespace TasksList.Controllers
                 {
                     if (!AssignmentExists(assignment.Id))
                     {
-                        return NotFound();
+                        PageNotFound();
                     }
                     else
                     {
@@ -121,14 +121,14 @@ namespace TasksList.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                PageNotFound();
             }
 
             var assignment = await _context.Tasks
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (assignment == null)
             {
-                return NotFound();
+                PageNotFound();
             }
 
             return View(assignment);
@@ -148,6 +148,12 @@ namespace TasksList.Controllers
         private bool AssignmentExists(int id)
         {
             return _context.Tasks.Any(e => e.Id == id);
+        }
+
+        private IActionResult PageNotFound()
+        {
+            Response.StatusCode = 404;
+            return View("404");
         }
     }
 }

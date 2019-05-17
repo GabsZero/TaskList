@@ -30,3 +30,4 @@ C:\Users\jjnir\source\repos\TasksList\TasksList\obj\Debug\netcoreapp2.2\Razor\Vi
 C:\Users\jjnir\source\repos\TasksList\TasksList\obj\Debug\netcoreapp2.2\Razor\Views\Assignments\Details.g.cshtml.cs
 C:\Users\jjnir\source\repos\TasksList\TasksList\obj\Debug\netcoreapp2.2\Razor\Views\Assignments\Edit.g.cshtml.cs
 C:\Users\jjnir\source\repos\TasksList\TasksList\obj\Debug\netcoreapp2.2\Razor\Views\Assignments\Index.g.cshtml.cs
+C:\Users\jjnir\source\repos\TasksList\TasksList\obj\Debug\netcoreapp2.2\Razor\Views\Shared\404.g.cshtml.cs
